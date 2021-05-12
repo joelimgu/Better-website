@@ -1,0 +1,130 @@
+
+#hero-text
+    margin: 10rem 2rem 0rem 2rem
+    
+    #hello-title
+        opacity: 0%
+        font-weight: 600
+        min-width: 300px
+        animation: disapear 1s 1s reverse forwards
+
+
+#skills-dysplay
+    display: flex
+    height: 7rem
+    width: 100%
+    margin: 2rem 0 0 0
+    padding: .5rem 10px .5rem 0
+    justify-content: space-around
+    align-items: center
+    border-top: 2px solid black
+    border-bottom: 2px solid black
+
+    animation: skills_appear 1.5s normal forwards
+
+    h1
+        font-weight: normal
+        border-right: 2px solid black
+        animation: blinkTextCursor 500ms infinite alternate
+    img
+        height: 90%
+
+
+#social-media-container
+    margin: 4rem 2rem 0 2rem
+    display: flex
+    align-items: center
+    justify-content: space-around
+
+
+.social-media-btn
+    $icon_size: 4.5rem
+    margin: 0 0 0 0
+    height: $icon_size
+    width: $icon_size
+    background-image: linear-gradient(to bottom right, #00F0FF, #4F55D8)
+    border-radius: 15px
+    cursor: pointer
+    opacity: 0%
+    animation: disapear 1s 1.5s reverse forwards
+
+    img
+        max-height: $icon_size*(4/5)
+        width: $icon_size*(4/5)
+        position: relative
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+
+
+#my-work-btn
+    display: flex
+    align-items: center
+    justify-content: space-around
+    height: 4rem
+    width: 100%
+    margin-top: 5rem
+    cursor: pointer
+
+    opacity: 0%
+    animation: disapear 1s 2s reverse forwards
+
+    div 
+        height: 100%
+        width: 50%
+        border-radius: 10px
+        align-self: center
+        background-image: linear-gradient(to bottom right, #00F0FF, #4F55D8)
+        display: flex
+        align-items: center
+        justify-content: space-around
+
+        h1
+            color: white
+            font-weight: normal
+
+
+
+@media (min-width:800px)
+    #hero-text
+        display: flex
+        justify-content: space-around
+        align-items: center
+        h1
+            font-size: 3rem
+
+        #skills-dysplay
+            max-width: 40vw
+    
+    #social-media-container
+        margin-left: 10rem
+        margin-right: 10rem
+
+
+
+
+
+
+
+@keyframes blinkTextCursor
+    from
+        border-right-color: black
+    to
+        border-right-color: transparent
+
+@keyframes disapear
+    0%
+        opacity: 100%
+    100%
+        opacity: 0%
+
+@keyframes skills_appear
+    0%
+        width: 0px
+        height: 0px
+        
+    50%
+        width: 100%
+        height: 0px
+    100%
+        height: 7rem

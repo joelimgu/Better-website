@@ -1,0 +1,17 @@
+
+
+<span id="page">
+    <div id="projects-timeline">
+        <ng-template *ngFor='let project of projects' [ngTemplateOutlet]='ProjectCard' [ngTemplateOutletContext]='project'></ng-template>
+    </div>
+
+</span>
+
+
+
+<ng-template #ProjectCard let-title="title" let-image="image" let-alt="alt">
+    <div class="project-card">
+        <h1>{{title}}</h1>
+        <img src={{image}} alt={{alt}}>
+    </div>
+</ng-template>

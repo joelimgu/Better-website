@@ -1,0 +1,35 @@
+
+<span id="main">
+    <div id="hero-text">
+      <h1 id="hello-title" #hello_title>Hi, I'm Joel, <br> I code stuff</h1>
+      <div id="skills-dysplay">
+          <h1>{{skill_dysplay.skill_text}}</h1>
+          <img src={{skill_dysplay.img_path}} alt={{skill_dysplay.alt}} #skill_logo>
+      </div>
+    </div>
+    
+    <div id="social-media-container">
+      <ng-container *ngTemplateOutlet='SocialMedia;context:gh_btn_data'></ng-container>
+      <ng-template [ngTemplateOutlet]='SocialMedia' [ngTemplateOutletContext]='{icon:"assets/img/email_logo.svg", action:"", alt:"email"}'></ng-template>
+      <ng-template [ngTemplateOutlet]='SocialMedia' [ngTemplateOutletContext]='{icon:"assets/img/phone_logo.svg", action:"", alt:"phone"}'></ng-template>
+      <ng-container *ngTemplateOutlet='SocialMedia;context:in_btn_data'></ng-container>
+    </div>
+    
+    <div id="my-work-btn">
+      <div>
+        <h1>See my work</h1>
+      </div>
+    </div> 
+  
+  </span>
+  
+  <div id="particles-js"></div>
+  
+  
+  <ng-template id="social-media" #SocialMedia let-action="action" let-icon="icon" let-alt="alt">
+    <div class="social-media-btn" (click)="action()">
+      <img src={{icon}} alt={{alt}}>
+    </div>
+  </ng-template>
+  
+  
