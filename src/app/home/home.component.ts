@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 
 import { Iskill } from '../interfaces';
 import { ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ import { ViewChild } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router ) { }
 
   ngOnInit(): void {
   }
@@ -95,4 +96,7 @@ export class HomeComponent implements OnInit {
     this.skills_animation();
   }
 
+  goto(route: string) {
+      this.router.navigate([route]);
+  }
 }

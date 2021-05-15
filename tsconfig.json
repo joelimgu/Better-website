@@ -15,10 +15,12 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
   },
+
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
-    "enableIvy": false
+    "enableIvy": false,
+    "strictTemplates": true
   }
 }

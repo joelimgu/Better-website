@@ -16,15 +16,13 @@
     </div>
     
     <div id="my-work-btn">
-      <div>
+      <div (click)='goto("projects")'>
         <h1>See my work</h1>
       </div>
-    </div> 
-  
+    </div>
   </span>
   
   <div id="particles-js"></div>
-  
   
   <ng-template id="social-media" #SocialMedia let-action="action" let-icon="icon" let-alt="alt">
     <div class="social-media-btn" (click)="action()">
