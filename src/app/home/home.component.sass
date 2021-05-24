@@ -1,4 +1,5 @@
 
+
 #hero-text
     margin: 10rem 2rem 0rem 2rem
     
@@ -42,7 +43,7 @@
     margin: 0 0 0 0
     height: $icon_size
     width: $icon_size
-    background-image: linear-gradient(to bottom right, #00F0FF, #4F55D8)
+    background-color: black
     border-radius: 15px
     cursor: pointer
     opacity: 0%
@@ -55,7 +56,11 @@
         left: 50%
         top: 50%
         transform: translate(-50%, -50%)
-
+        fill: white //put color to white
+    
+    &:hover
+        //background-color: blue
+        filter: invert(90%)
 
 #my-work-btn
     display: flex
@@ -74,7 +79,7 @@
         width: 50%
         border-radius: 10px
         align-self: center
-        background-image: linear-gradient(to bottom right, #00F0FF, #4F55D8)
+        background-color: black
         display: flex
         align-items: center
         justify-content: space-around
